@@ -1,0 +1,28 @@
+<view class="allview">
+
+  <view class="diary-title">
+  <image class="index-image" src="/images/action/mulu.png" bindtap="showPopup" ></image>
+    <view class="text">{{userDiary.usertitle}}</view>
+  </view>
+
+  <view class="mydate">{{userDiary.mydate?userDiary.mydate:""}} {{userDiary.startTime?userDiary.startTime:""}}</view>
+  <view class="textcontent">
+    <text>{{userDiary.userinput}}</text>
+  </view>
+
+  <van-popup
+  closeable 
+  position="left"
+  show="{{ show }}"
+  bindtap="loadDiary"
+  bind:close="onClose"
+  custom-style="width: 100%;height: 100%;">
+    <view class="index-text">目录</view>
+    <view class="index-item" wx:key="index" wx:for="{{rows}}" wx:for-item="c" data-id="{{c._id}}">
+      <view data-id="{{c._id}}" class="index-title">{{c.usertitle}}</view>
+      <view data-id="{{c._id}}" class="index-date">{{c.mydate}}</view>
+    </view>
+  </van-popup>
+
+  <view><image bindtap="loadDiaryIndex" style="{{btnswitch}}" class="pop-image" src="/images/action/loadmore.png"></image></view>
+</view>

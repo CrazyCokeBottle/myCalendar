@@ -1,0 +1,92 @@
+<view class="allview" style='height:{{windowHeight}}rpx'>
+
+  <view class="calendar">
+    <view class="year">
+      <view class="textleft" title="展示弹出层" bindtap="showPopup">
+        <text>{{usertheday}}</text>
+      </view>
+      <view class="imgright" bindtap="btnchange">
+        <image style="{{theday == today? 'display:none;' : '' }}" data-action="today" src="/images/action/jin-white.png"></image>
+        <image catchtap="jumpRemark" data-action="add" src="/images/action/xie.png"></image>
+      </view>
+    </view>
+
+    <view class="calendar-body">
+      <view class="month" 
+      bindtap="switchMonth">
+        <image 
+        class="action " 
+        data-action="prev"
+        src="/images/action/qianjin_1.png"></image>
+        <text>{{month}}月</text>
+        <image 
+        class="action" 
+        data-action="next"
+        src="/images/action/qianjin.png"></image>
+      </view>
+
+      <view class="week">
+        <view 
+        wx:for="{{weekday}}" 
+        wx:for-item="wd"
+        wx:key="index">{{wd}}</view>
+      </view>
+
+      <view 
+      class="day" 
+      bindtap="checkedDay">
+        <view 
+        wx:for="{{day}}" 
+        wx:for-item="week" 
+        wx:key="index" 
+        class="day-row">
+          <view 
+          data-day="{{wkchild}}" 
+          wx:for="{{week}}" 
+          wx:for-item="wkchild" 
+          wx:key="index"  
+          style="{{year+'-'+month+'-'+wkchild==today?today_view:''}}" 
+          class="day-cell {{year+'-'+month+'-'+wkchild==theday?checked_view:''}}">{{wkchild}}</view>
+        </view>
+      </view>
+
+    </view>
+  </view>
+
+  <van-popup 
+  show="{{ show }}" 
+  round
+  custom-style="width: 90%;height: 42%;"
+  bind:close="onClose">
+    <van-datetime-picker
+    type="date"
+    title="选择日期"
+    value="{{ currentDate }}"
+    bind:input="onInput"
+    bind:confirm="confirm"
+    bind:cancel="cancel"
+    min-date="{{ minDate }}"
+    formatter="{{ formatter }}"
+    />
+  </van-popup>
+
+  <swiper 
+  autoplay 
+  current="2"
+  indicator-dots
+  previous-margin="50rpx"
+  next-margin="50rpx"
+  indicator-active-color="#f4598d"
+  indicator-color="rgba(244, 88, 141, .3)"
+  class="carousel"
+  >
+    <block wx:for="{{carousel}}" wx:for-item="myimg" wx:key="index">
+      <swiper-item>
+        <view class="carousel-cell">
+          <image class="" src="{{myimg}}"></image>
+        </view>
+      </swiper-item>
+    </block>
+  </swiper>
+
+</view>

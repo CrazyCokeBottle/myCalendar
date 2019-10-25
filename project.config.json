@@ -1,0 +1,81 @@
+{
+	"miniprogramRoot": "miniprogram/",
+	"cloudfunctionRoot": "cloudfunctions/",
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"enhance": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"coverView": true,
+		"nodeModules": true,
+		"autoAudits": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		},
+		"bundle": false
+	},
+	"appid": "wx43deffe8b6825562",
+	"projectname": "myCalendar",
+	"libVersion": "2.8.1",
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"list": []
+		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": -1,
+					"name": "db guide",
+					"pathName": "pages/databaseGuide/databaseGuide",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "pages/userCenter/userCenter",
+					"pathName": "pages/userCenter/userCenter",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 2,
+					"name": "pages/useradd/useradd",
+					"pathName": "pages/useradd/useradd",
+					"query": "mydate=2019-10-22",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/userdiary/userdiary",
+					"pathName": "pages/userdiary/userdiary",
+					"scene": null
+				}
+			]
+		}
+	}
+}

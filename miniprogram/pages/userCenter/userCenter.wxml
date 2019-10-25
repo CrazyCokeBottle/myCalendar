@@ -1,0 +1,26 @@
+<view class="mytop">
+  <view class="profile">
+    <view class="profile-img">
+      <open-data type="userAvatarUrl"></open-data>
+    </view>
+    <view class="profile-name">
+      <open-data type="userNickName"></open-data>
+    </view>
+  </view>
+</view>
+
+<view class="cell-top">
+  <van-cell title="版本信息"  value="Bate v1.0.0"/>
+  <van-cell bindtap="showPopup" title="关于我的日记" is-link/>
+</view>
+
+<van-popup
+show="{{ show }}" 
+bindtap="onClose"
+position="right"
+custom-style="width: 50%;height: 100%">
+<view class="popcolor">
+  <view class="mycontent">祝你天天开心</view>
+  <image src="/images/action/jiayou.jpg"></image>
+</view>
+</van-popup>

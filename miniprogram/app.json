@@ -1,0 +1,40 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/useradd/useradd",
+    "pages/userdiary/userdiary",
+    "pages/userCenter/userCenter"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#FFFFFF",
+    "navigationBarTitleText": "我的日历",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "color": "#e6e6e6",
+    "selectedColor": "#f4598d",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "主页",
+        "iconPath": "images/tabBar/rili.png",
+        "selectedIconPath": "images/tabBar/Selectrili.png"
+      },
+      {
+        "pagePath": "pages/userdiary/userdiary",
+        "text": "日记",
+        "iconPath": "images/tabBar/woderiji.png",
+        "selectedIconPath": "images/tabBar/Selectwoderiji.png"
+      },
+      {
+        "pagePath": "pages/userCenter/userCenter",
+        "text": "用户",
+        "iconPath": "images/tabBar/gerenzhongxin.png",
+        "selectedIconPath": "images/tabBar/Selectgerenzhongxin.png"
+      }
+    ]
+  }
+}

@@ -1,0 +1,25 @@
+<view class="allview" style='height:{{windowHeight}}rpx'>
+  <view class="myhead">
+    <text class="mytext">写日记</text>
+    <text>|</text>
+    <text class="mydate">{{mydate}}</text>
+    <text>{{startTime}}</text>
+  </view>
+  <view class="mytitle">
+    <text>标题：</text> 
+    <input
+    type="text" 
+    maxlength="26"
+    bindinput="changetitle"
+    placeholder="你好！今天！" 
+    ></input>
+  </view>
+  <textarea 
+  type="text" 
+  class="myinput"
+  bindinput="changeinput" 
+  maxlength="{{maxlength}}" 
+  placeholder="今天想要写点什么？(*^▽^*)"></textarea>
+  <view class="count">{{inputlength}}/{{maxlength}}</view>
+  <button class="mybtn" bindtap="adduserinfo">保存</button>
+</view>
